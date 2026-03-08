@@ -1,12 +1,15 @@
 Project Name: Supply Chain Dataset Analysis
+
 Project Idea  
 This project focuses on analyzing supply chain data to extract meaningful insights that support better business decisions.The project includes data cleaning, exploratory data analysis, forecasting techniques, and building interactive dashboards to monitor supply chain performance and identify improvement opportunities. 
+
 Team Members:
 1. Eman Gamal Ghanem
 2. Fady Emad Nagib Youssef
 3. Nadeen Mohammed Ibrahim Mohammed
 4. Aya Hafez Abd El Mageed
 5. Abdallah Abdelmaksoud Abdelmaksoud
+
 Project Plan
 1. Research & Analysis
 -Understanding the dataset
@@ -27,17 +30,21 @@ Project Plan
 6. Final Presentation
 -Preparing the final report
 -Presenting project insights
+
 Roles & Responsibilities:
 • Data Cleaning & Preparation
 • Data Analysis & Visualization
 • Dashboard Development
 • Documentation & Presentation
+
 KPIs (Key Performance Indicators):
 Metrics used to evaluate the project success:
 -Forecast accuracy
 -Data processing time
 -Dashboard usability
 -Insight generation efficiency
+
 Instructor: Eng.Mohammed Yasser
+
 Project Files 
 You can find the full project files here:  -------- 
