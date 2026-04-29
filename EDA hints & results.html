@@ -1,0 +1,201 @@
+
+<style>
+.wrap { padding: 1rem 0; font-family: var(--font-sans); }
+.section-title {
+  font-size: 11px; font-weight: 500; letter-spacing: 0.08em;
+  color: var(--color-text-secondary); text-transform: uppercase;
+  margin: 1.8rem 0 0.5rem; padding-bottom: 6px;
+  border-bottom: 0.5px solid var(--color-border-tertiary);
+}
+.q-card {
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 14px 16px;
+  margin-bottom: 10px;
+  background: var(--color-background-primary);
+}
+.q-header { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 8px; }
+.q-title { font-size: 14px; font-weight: 500; color: var(--color-text-primary); flex: 1; }
+.badge { font-size: 11px; font-weight: 500; padding: 2px 8px; border-radius: 20px; white-space: nowrap; }
+.b-sales   { background: #E6F1FB; color: #0C447C; }
+.b-product { background: #EEEDFE; color: #3C3489; }
+.b-branch  { background: #E1F5EE; color: #085041; }
+.b-stock   { background: #FAEEDA; color: #633806; }
+@media (prefers-color-scheme: dark) {
+  .b-sales   { background: #0C447C; color: #B5D4F4; }
+  .b-product { background: #3C3489; color: #CECBF6; }
+  .b-branch  { background: #085041; color: #9FE1CB; }
+  .b-stock   { background: #633806; color: #FAC775; }
+}
+.row { display: flex; gap: 8px; align-items: flex-start; margin-bottom: 5px; }
+.label { font-size: 11px; font-weight: 500; min-width: 46px; color: var(--color-text-secondary); padding-top: 1px; text-transform: uppercase; letter-spacing: 0.05em; }
+.hint-text { font-size: 13px; color: var(--color-text-secondary); line-height: 1.5; }
+.result-text { font-size: 13px; color: var(--color-text-primary); font-weight: 500; line-height: 1.5; }
+.divider { border: none; border-top: 0.5px solid var(--color-border-tertiary); margin: 8px 0; }
+</style>
+
+<div class="wrap">
+
+<div class="section-title">Sales performance</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Top-selling products</span><span class="badge b-sales">Sales</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Join Products + Sales, group by product name, sum Total, order descending — take top 10.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">Rice Cooker 1.0L (Silver) leads with 12,233 units sold.</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Lowest-selling products</span><span class="badge b-sales">Sales</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Same as the previous question but order ascending — take top 10 from the bottom.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">Cold Press Juicer (Black) is the lowest seller with only 4,493 units.</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Daily sales trend</span><span class="badge b-sales">Sales</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Group Sales by SalesDate, sum Total per day, order by date — visualize as a line chart.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">Data spans June 1 to December 31, 2024 — 7 months of daily sales records.</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Best sales day</span><span class="badge b-sales">Sales</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Group by SalesDate, sum Total, order descending — take TOP 1.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">June 30, 2024 was the best day with 3,899 total units sold.</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Average daily sales per branch</span><span class="badge b-sales">Sales</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Use AVG() on each branch column (Apsis, Basalt, Ceres) separately — UNION ALL the three results.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">All three branches are nearly equal — Apsis 9.3, Basalt 9.3, Ceres 9.4 units/day on average.</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Declining products over time</span><span class="badge b-sales">Sales</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Use FORMAT() to extract year-month, then LAG() window function to compare each month vs the previous one per product.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">182 month-over-month drops detected. Worst single drop: Rice Cooker 2.0L (Silver) fell by 366 units in one month.</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Best sales week</span><span class="badge b-sales">Sales</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Use DATEPART(WEEK, SalesDate) to group by week number, sum Total, order descending — take TOP 1.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">Week 26 of 2024 (Jun 24 → Jun 30) was the best week with 15,714 total units sold.</span></div>
+</div>
+
+<div class="section-title">Product & brand analysis</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Highest-selling brand</span><span class="badge b-product">Product</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Join Products + Sales, group by Brand, sum Total — order descending.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">Bellis is the top brand with 142,107 units — followed by Aster (140,767) and Callas (131,957).</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Top product group by sales</span><span class="badge b-product">Product</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Join Products + Sales, group by ProductGroup, sum Total — order descending.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">Rice Cooker is the dominant product group with 141,088 units sold.</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Highest revenue products</span><span class="badge b-product">Product</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Revenue = Total × Price. Multiply after joining, then group by product and sum — different from just counting units sold.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">Rapid Air Oven 12L (Green) generates the highest revenue at $27,881,385 — despite not being the top seller by units.</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Top 5 products per brand</span><span class="badge b-product">Product</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Use a CTE to get sales per product, then ROW_NUMBER() partitioned by Brand ordered by TotalSales DESC — filter WHERE rn &lt;= 5.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">Top product per brand — Aster: Rice Cooker 1.0L Silver (12,233) | Bellis: Rice Cooker 1.5L Silver (11,237) | Callas: Rice Cooker 4 in 1 Silver (11,015).</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">High price, low sales products</span><span class="badge b-product">Product</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Filter products above average price using a subquery in HAVING, then order by TotalSales ASC to surface underperformers.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">Microwave 45L (Silver) — priced at $3,542 — sold only 4,864 units. High price, low demand signal.</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Average price per brand & group</span><span class="badge b-product">Product</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Query Products only — no join needed. Group by Brand and ProductGroup, use AVG(), MIN(), MAX() on Price.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">Callas is the priciest brand (avg $1,176), followed by Bellis ($981) and Aster ($538).</span></div>
+</div>
+
+<div class="section-title">Branch analysis</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Branch contribution to sales</span><span class="badge b-branch">Branch</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Use SUM() on each branch column individually — UNION ALL to stack the three results into one output.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">Ceres leads with 139,510 units vs Apsis 137,754 and Basalt 137,567 — all three branches are very balanced.</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Top product per branch</span><span class="badge b-branch">Branch</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Sum each branch column per product in a CTE, then use ROW_NUMBER() per branch in a UNION ALL — filter WHERE rn = 1.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">Rice Cooker 1.0L (Silver) tops Apsis (3,987) and Basalt (3,995). Ceres prefers Rice Cooker 4 in 1 (Silver) with 4,973 units.</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Branch contribution % per brand</span><span class="badge b-branch">Branch</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Group by Brand, then divide each branch sum by Total using ROUND(SUM(Apsis) * 100.0 / SUM(Total), 2) for percentage.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">All brands split roughly 33% / 33% / 34% across branches — no single branch dominates any brand.</span></div>
+</div>
+
+<div class="section-title">Stock & supply chain</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Low stock products (need restocking)</span><span class="badge b-stock">Stock</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Aggregate Stock by ProductID (SUM StockBalance), join Products, then filter WHERE StockBalance &lt; 50.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">21 products are below the 50-unit threshold — Rice Cooker 1.0L (Silver) and Rice Cooker 1.8L (Silver) are completely out of stock.</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Overstocked products</span><span class="badge b-stock">Stock</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Same stock aggregation — but order descending and take TOP 10 to find the most overstocked.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">Rice Cooker 4 in 1 (Silver) has the highest stock balance at 178 units.</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Sales vs stock comparison</span><span class="badge b-stock">Stock</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Triple join: Products + Sales + Stock (aggregated). Display TotalSales and StockBalance side by side per product.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">Rice Cooker 1.0L (Silver) is the top seller — yet its stock balance is 0, flagging an urgent restock need.</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">At-risk products (high sales, low stock)</span><span class="badge b-stock">Stock</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Use HAVING with two conditions: sales above average (subquery) AND StockBalance &lt; 50. Add a CASE label for Out of Stock / Critical / Low.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">11 at-risk products identified. Rice Cooker 1.8L (Silver) is the most critical — 7,067 units sold and 0 stock remaining.</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Average delivery time per location</span><span class="badge b-stock">Stock</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Use DATEDIFF(DAY, OrderDate, DeliveryDate) inside AVG(), grouped by Location — also include MIN and MAX for range.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">Ceres is slowest at 24.7 days avg, Apsis 24.0 days, and Basalt is fastest at 23.6 days average delivery.</span></div>
+</div>
+
+<div class="q-card">
+  <div class="q-header"><span class="q-title">Most reordered products</span><span class="badge b-stock">Stock</span></div>
+  <div class="row"><span class="label">Hint</span><span class="hint-text">Count rows per ProductID in Stock (each row = one purchase order), join Products for names, order by count descending.</span></div>
+  <hr class="divider">
+  <div class="row"><span class="label">Result</span><span class="result-text">Compact Juicer (Black) is the most frequently reordered product with 15 separate purchase orders.</span></div>
+</div>
+
+</div>
