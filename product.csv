@@ -1,0 +1,71 @@
+Product ID,Product,Product Group,Brand,Price
+P001,Slow Juicer (Blue),Juicer,Aster,180
+P002,Juicer Plus Blender (Blue),Juicer,Callas,64
+P003,Cold Press Juicer (Blue),Juicer,Aster,224
+P004,Compact Juicer (Blue),Juicer,Callas,139
+P005,Slow Juicer (Pink),Juicer,Callas,136
+P006,Juicer Plus Blender (Pink),Juicer,Aster,319
+P007,Cold Press Juicer (Pink),Juicer,Bellis,321
+P008,Compact Juicer (Pink),Juicer,Bellis,80
+P009,Slow Juicer (White),Juicer,Bellis,276
+P010,Juicer Plus Blender (White),Juicer,Callas,302
+P011,Cold Press Juicer (White),Juicer,Bellis,324
+P012,Compact Juicer (White),Juicer,Bellis,251
+P013,Slow Juicer (Black),Juicer,Aster,340
+P014,Juicer Plus Blender (Black),Juicer,Callas,281
+P015,Cold Press Juicer (Black),Juicer,Callas,234
+P016,Compact Juicer (Black),Juicer,Aster,84
+P017,Microwave 20L (Silver),Microwave,Bellis,2512
+P018,Microwave 32L (Silver),Microwave,Callas,2954
+P019,Microwave 45L (Silver),Microwave,Bellis,3542
+P020,Microwave 25L (Silver),Microwave,Callas,2112
+P021,Microwave 20L (Red),Microwave,Aster,1985
+P022,Microwave 32L (Red),Microwave,Bellis,2451
+P023,Microwave 45L (Red),Microwave,Callas,2898
+P024,Microwave 25L (Red),Microwave,Aster,1895
+P025,Microwave 20L (Black),Microwave,Bellis,1543
+P026,Microwave 32L (Black),Microwave,Callas,2698
+P027,Microwave 45L (Black),Microwave,Bellis,3542
+P028,Microwave 25L (Black),Microwave,Callas,2556
+P029,Heavy Duty Mixer 5Q (Red),Mixer,Aster,895
+P030,7 Speed Hand Mixer (Red),Mixer,Bellis,194
+P031,9 Speed Hand Mixer (Red),Mixer,Aster,210
+P032,Compact Mixer (Red),Mixer,Bellis,359
+P033,Heavy Duty Mixer 5Q (White),Mixer,Aster,852
+P034,7 Speed Hand Mixer (White),Mixer,Bellis,231
+P035,9 Speed Hand Mixer (White),Mixer,Aster,133
+P036,Compact Mixer (White),Mixer,Aster,145
+P037,Electric Oven 12L (Green),Oven,Callas,2598
+P038,Rapid Air Oven 12L (Green),Oven,Callas,4585
+P039,Electric Oven 12L (White),Oven,Callas,1542
+P040,Electric Oven 20L (White),Oven,Bellis,1896
+P041,Steam Oven 15L (White),Oven,Aster,1685
+P042,Rapid Air Oven 12L (White),Oven,Bellis,1562
+P043,Electric Oven 12L (Black),Oven,Bellis,1246
+P044,Electric Oven 20L (Black),Oven,Bellis,2659
+P045,Steam Oven 15L (Black),Oven,Aster,1465
+P046,Rapid Air Oven 12L (Black),Oven,Callas,1365
+P047,Rice Cooker 0.6L (White),Rice Cooker,Aster,244
+P048,Rice Cooker 1.0L (White),Rice Cooker,Aster,207
+P049,Rice Cooker 1.5L (White),Rice Cooker,Callas,338
+P050,Rice Cooker 1.8L (White),Rice Cooker,Bellis,246
+P051,Rice Cooker 2.0L (White),Rice Cooker,Aster,228
+P052,Rice Cooker 4 in 1 (White),Rice Cooker,Bellis,355
+P053,Rice Cooker 0.6L (Silver),Rice Cooker,Callas,346
+P054,Rice Cooker 1.0L (Silver),Rice Cooker,Aster,90
+P055,Rice Cooker 1.5L (Silver),Rice Cooker,Bellis,207
+P056,Rice Cooker 1.8L (Silver),Rice Cooker,Callas,68
+P057,Rice Cooker 2.0L (Silver),Rice Cooker,Aster,231
+P058,Rice Cooker 4 in 1 (Silver),Rice Cooker,Callas,96
+P059,Rice Cooker 0.6L (Red),Rice Cooker,Bellis,173
+P060,Rice Cooker 1.0L (Red),Rice Cooker,Aster,338
+P061,Rice Cooker 1.5L (Red),Rice Cooker,Callas,99
+P062,Rice Cooker 1.8L (Red),Rice Cooker,Bellis,102
+P063,Rice Cooker 2.0L (Red),Rice Cooker,Aster,294
+P064,Rice Cooker 4 in 1 (Red),Rice Cooker,Callas,113
+P065,Rice Cooker 0.6L (Silver),Rice Cooker,Bellis,110
+P066,Rice Cooker 1.0L (Silver),Rice Cooker,Aster,91
+P067,Rice Cooker 1.5L (Silver),Rice Cooker,Bellis,240
+P068,Rice Cooker 1.8L (Silver),Rice Cooker,Aster,239
+P069,Rice Cooker 2.0L (Silver),Rice Cooker,Bellis,98
+P070,Rice Cooker 4 in 1 (Silver),Rice Cooker,Callas,350
